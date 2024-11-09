@@ -1,0 +1,215 @@
+/* Reset and basic styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: #e1f5fe;
+    /* Light blue background color */
+}
+
+/* Navigation Styling */
+nav {
+    background: #fff;
+    padding: 1rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    /* Centers the navigation items */
+    gap: 2rem;
+    /* Adds space between items */
+    list-style-type: none;
+}
+
+nav ul li {
+    display: inline-block;
+}
+
+nav ul li a {
+    font-size: 1.2rem;
+    color: #333;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+    padding: 0.5rem;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ff5722;
+    /* Change to orange color on hover */
+}
+
+/* Hero Section */
+.hero {
+    background: url('assets/images/hero-bg.jpg') no-repeat center center/cover;
+    color: #ac1919;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.hero-content h1 {
+    font-family: 'Lora', serif;
+    font-size: 3rem;
+}
+
+.cta-button {
+    background: #ff5722;
+    padding: 0.8rem 2rem;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    color: #fff;
+    margin-top: 1rem;
+}
+
+.cta-button:hover {
+    background: #e64a19;
+}
+
+/* Skills Section */
+#skills .skill-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin: 2rem 0;
+}
+
+.skill-card {
+    background: #c05959;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.progress-bar {
+    background: #ddd;
+    border-radius: 10px;
+    height: 8px;
+    margin-top: 10px;
+}
+
+.progress {
+    background: #4caf50;
+    height: 100%;
+    text-align: center;
+    line-height: 8px;
+    color: white;
+    border-radius: 10px;
+}
+
+/* Project Section */
+#projects .project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem;
+}
+
+.project-card {
+    background: #fff;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.project-card img {
+    width: 50%;
+    border-radius: 8px;
+}
+
+.project-card a {
+    display: inline-block;
+    margin-top: 10px;
+    color: #ff5722;
+    font-weight: bold;
+}
+
+/* Testimonials Section */
+#testimonials .testimonial-slider {
+    display: flex;
+    overflow-x: scroll;
+    gap: 1rem;
+}
+
+.testimonial-card {
+    background: #fff;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 300px;
+}
+
+/* Contact Form */
+#contact form input,
+#contact form textarea {
+    width: 70%;
+    padding: 0.6rem;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+#contact form button {
+    background: #ff5722;
+    color: white;
+    padding: 0.3rem;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+#contact form button:hover {
+    background: #e64a19;
+}
+
+/* Footer */
+footer {
+    background: #333;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+footer .social-media a {
+    margin: 0 1rem;
+    color: white;
+    font-size: 1.5rem;
+}
+
+footer .social-media a:hover {
+    color: #ff5722;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .cta-button {
+        padding: 0.6rem 1.5rem;
+    }
+
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .testimonial-slider {
+        flex-direction: column;
+    }
+
+    nav ul {
+        flex-direction: column;
+        /* Stack the navigation items vertically on small screens */
+        align-items: center;
+    }
+}
